@@ -1,0 +1,16 @@
+body{
+  width: 100vw;
+  background-color: lightblue;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+td{
+  border: 1px solid black;
+}
+
+footer{
+  margin-top: 60%;
+}
