@@ -1,14 +1,57 @@
+html, body{
+  margin: 0px;
+}
+
+
 body{
   width: 100vw;
-  background-color: lightblue;
+  margin-left: 30px;
 }
 
 h1{
   text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+form{
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  width: 70%;
+}
+
+input{
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  margin-left: 20px;;
+
+}
+
+input:focus{
+  outline:  none;
+}
+
+table{
+width: 80%;
+margin-top:50px;
 }
 
 td{
   border: 1px solid black;
+}
+
+.title{
+width:100px;
+}
+
+.descript{
+  width:400px;
+}
+
+.btnSup{
+  width:0px;
+  border: none
 }
 
 footer{
