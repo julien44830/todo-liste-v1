@@ -9,7 +9,7 @@ html, body{
 
 body{
   width: 100vw;
-  margin-left: 30px;
+  margin-left: 100px;
   font-family: 'Open Sans', sans-serif;
 
 }
@@ -18,6 +18,8 @@ h1{
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
+  text-decoration: underline 1px lightgrey;
+  line-height: 10px;
 }
 
 form{
@@ -31,7 +33,10 @@ input{
   border: none;
   border-bottom: 1px solid lightgrey;
   margin-left: 20px;;
+}
 
+#coche{
+  margin-left: 0px;
 }
 
 input:focus{
@@ -52,7 +57,7 @@ width:100px;
 }
 
 .descript{
-  width:400px;
+  width:auto;
 }
 
 .btnSup{
