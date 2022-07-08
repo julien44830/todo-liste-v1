@@ -22,25 +22,24 @@
     <section>
       <form action="">
         <span>créer une nouvelle tache</span>
-        <input type="text" placeholder="titre">
-        <input type="text" placeholder="tache">
-        <button type="button""">ajouter</button>
+        <input id="titre" type="text" placeholder="titre">
+        <input id="tache" type="text" placeholder="tache">
+        <button type="reset" id="btn1">ajouter</button>
       </form>
     </section>
   
     <table>
+      
       <tr>
-        <th >
-          
-        </th>
         <th>titre de la tache</td>
-        <th>action de la tache</th>
+        <th>déscription de la tache</th>
       </tr>
-      <tr>
+      
+      <tr id="newList">
         <td class="btnSup"><input type="checkbox" name="" id="coche"></th>
-        <td class="title">2</td>
-        <td class="descript">3</td>
-        <td class="btnSup"><button>supprimer</button></td>
+        <td class="title"></td>
+        <td class="descript"></td>
+        <td class="btnSup"><button id="btn2">supprimer</button></td>
       </tr>
     </table>
   </main>
@@ -56,6 +55,6 @@
   </footer>
 
 
-  <script src="script.js" href="script.js"></script>
+  <script src="script.js" href="script.js" defer></script>
 </body>
 </html>
