@@ -6,55 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ma todo liste</title>
   <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
 </head>
 <body>
   <header>
-    <h1>ma todo liste</h1>
+    <h1>ma to do liste</h1>
   </header>
 
   <main>
 
     <section>
-      <form action="">
+      <form>
         <span>créer une nouvelle tache</span>
-        <input id="titre" type="text" placeholder="titre">
+        <input id="title" type="text" placeholder="titre">
         <input id="tache" type="text" placeholder="tache">
-        <button type="reset" id="btn1">ajouter</button>
+        <button type="button" id="btn1" >ajouter</button>
       </form>
     </section>
-  
+
     <table>
-      
+
       <tr>
-        <th>titre de la tache</td>
-        <th>déscription de la tache</th>
+        <td class="btnSup ipout th"></td>
+        <td class="title th">titre de la tache</td>
+        <td class="descript th">déscription de la tache</td>
+        <td class="th"></td>
       </tr>
-      
-      <tr id="newList">
-        <td class="btnSup"><input type="checkbox" name="" id="coche"></th>
-        <td class="title"></td>
-        <td class="descript"></td>
-        <td class="btnSup"><button id="btn2">supprimer</button></td>
-      </tr>
+
+
+
     </table>
   </main>
 
   <footer>
+
     <p>
       date de création : 06/07/2022 .
     </p>
     <p>
       ©DENIAUD Julien
     </p>
-    
+
   </footer>
 
 
-  <script src="script.js" href="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
