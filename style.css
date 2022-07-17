@@ -1,15 +1,15 @@
-@font-face {
+/* @font-face {
   font-family: "koliko";
   src: url("/font/._koliko-Regular.woff") format("woff"),
 
-}
+} */
 
 
 
 
 html, body{
   margin: 0px;  
-  font-family: "koliko", regular;
+  font-family: "arial sans-serif", Arial, Helvetica, sans-serif;
 
 
 }
