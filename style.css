@@ -94,13 +94,13 @@ tr:hover{
 footer{
   bottom: 0;
   position: fixed;
-  width: 100%;
   display: inline;
   margin-left: 0px;
+  background-color: white;
 }
 
 footer > p{
-  width: 30%;
+  display: inline;
 }
 
 .fini{
