@@ -1,26 +1,34 @@
 
 const btn = document.getElementById('btn1');
+// non fonctionnelle
+// if (keycode == 32){
+//   newList()
+// }
 
 function newList (){
   const title = document.getElementById('title');
-  const tache = document.getElementById('tache');
-  const newTache = document.createElement('tr');
-  const table = "tableau";
   const titleValue = title.value;
   const titleLength = titleValue.length;
+  
+
+  const tache = document.getElementById('tache');
   const tacheValue = tache.value;
   const tacheLength = tacheValue.length;
-  console.log(titleValue);
-  console.log(titleLength);
-  console.log(checkbox);
-  console.log('titre ' + title.value);
-  console.log('tache ' + tache.value);
-  const i = 0;
+  console.log(tacheValue);
+  console.log(tacheLength);
+
+
+  const table = "tableau";
+  const newTache = document.createElement('tr');
   
-  if (tacheLength || titleLength > i){
+  console.log(checkbox);
+  
+  // const i = 0;
+  
+  if (tacheLength || titleLength > 0){
     newTache.innerHTML = `
     <tr class="" name="${table}"id="" name="nouvelleLigne" value="">
-    <td class="btnSup"><input type="checkbox" name="" onclick="(functFini)" id="coche" checked ></td>
+    <td class="btnSup"><input type="checkbox" name="" onChange="(functFini)" id="coche" checked ></td>
     <td name="" class="title">${titleValue}</td>
       <td name="tache" class="descript">${tache.value}</td>
       <td class="btnSup"><button id="btn2" type="reset">supprimer</button></td>
@@ -28,6 +36,16 @@ function newList (){
     `;
     
     document.querySelector("table").appendChild(newTache);
+
+    console.log(titleValue);
+    console.log(titleLength);
+
+    // non fonctionnelle
+    if ( tacheLength || titleLength == 0){
+      console.log('titre -> ' + "non défini");
+      console.log('tache -> ' + "non défini");
+    }
+
   }else{
       alert("veuiller rentrer une nouvelle tache");
     }
@@ -44,4 +62,6 @@ function newList (){
 btn.addEventListener("click", newList);
 
 const checkbox = document.getElementById('coche');
-checkbox.addEventListener("change", functFini());
+
+// erreur sur l'écoute de l'évènement
+checkbox.addEventListener("onChange", functFini());
