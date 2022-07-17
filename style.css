@@ -27,6 +27,11 @@ h1{
   line-height: 10px;
 }
 
+main{
+  margin-left: 100px;
+
+}
+
 form{
   border-bottom: 1px solid lightgrey;
   padding-bottom: 50px;
@@ -87,7 +92,15 @@ tr:hover{
 }
 
 footer{
-  margin-top: 60%;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  display: inline;
+  margin-left: 0px;
+}
+
+footer > p{
+  width: 30%;
 }
 
 .fini{
