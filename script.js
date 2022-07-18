@@ -5,11 +5,11 @@ const btn = document.getElementById('btn1');
 //   newList()
 // }
 
-function newList (){
+function newList() {
   const title = document.getElementById('title');
   const titleValue = title.value;
   const titleLength = titleValue.length;
-  
+
 
   const tache = document.getElementById('tache');
   const tacheValue = tache.value;
@@ -20,48 +20,63 @@ function newList (){
 
   const table = "tableau";
   const newTache = document.createElement('tr');
-  
-  console.log(checkbox);
-  
+
+  // console.log(checkbox);
+
   // const i = 0;
-  
-  if (tacheLength || titleLength > 0){
+
+  if (tacheLength && titleLength > 0) {
     newTache.innerHTML = `
-    <tr class="" name="${table}"id="" name="nouvelleLigne" value="">
-    <td class="btnSup"><input type="checkbox" name="" onChange="(functFini)" id="coche" checked ></td>
-    <td name="" class="title">${titleValue}</td>
-      <td name="tache" class="descript">${tache.value}</td>
-      <td class="btnSup"><button id="btn2" type="reset">supprimer</button></td>
+    <tr class="" name="titleValue"id="" name="nouvelleLigne" value="">
+    <td class="btnSup"><input type="checkbox" name="${titleValue}" onChange="(functFini)" id="coche" checked ></td>
+    <td name="titleValue" class="title">${titleValue}</td>
+    <td name="tache" class="descript">&#10132 ${tache.value}</td>
+    <td class="btnSup"><button id="btn2" type="reset">supprimer</button></td>
     </tr>
+
+<script>
+const checkbox = document.getElementById('coche');
+
+checkbox.addEventListener("click", function () {
+  alert('changed');
+})
+</script>
+
     `;
-    
+
     document.querySelector("table").appendChild(newTache);
 
+    
     console.log(titleValue);
     console.log(titleLength);
 
     // non fonctionnelle
-    if ( tacheLength || titleLength == 0){
+    if (tacheLength || titleLength == 0) {
       console.log('titre -> ' + "non défini");
       console.log('tache -> ' + "non défini");
     }
 
-  }else{
-      alert("veuiller rentrer une nouvelle tache");
-    }
+  } else {
+    alert("Pour créer une nouvelle veuillez rentrer un Titre et une Description");
   }
+}
 
-  function functFini(){
-    if (checked == true){
-      contenu.ClassList.add('fini');
-    }else{
+
+function functFini() {
+  if (checked == true) {
+    contenu.ClassList.add('fini');
+  } else {
     contenu.classList.remove('fini');
   }
 }
 
 btn.addEventListener("click", newList);
 
-const checkbox = document.getElementById('coche');
+// const checkbox = document.getElementById('coche');
 
-// erreur sur l'écoute de l'évènement
-checkbox.addEventListener("onChange", functFini());
+// checkbox.addEventListener("click", function () {
+//   alert('changed');
+// })
+
+// erreur sur l'écouste de l'évènement
+// checkbox.addEventListener("Change", functFini());

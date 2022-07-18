@@ -23,8 +23,9 @@ h1{
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
-  text-decoration: underline 1px lightgrey;
+  text-decoration: underline 2px lightgrey;
   line-height: 10px;
+  
 }
 
 main{
@@ -64,7 +65,6 @@ table{
 }
 
 td{
-  border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   padding-top: 25px;
 }
