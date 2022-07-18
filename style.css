@@ -1,15 +1,15 @@
-@font-face {
+/* @font-face {
   font-family: "koliko";
   src: url("/font/._koliko-Regular.woff") format("woff"),
 
-}
+} */
 
 
 
 
 html, body{
   margin: 0px;  
-  font-family: "koliko", regular;
+  font-family: "arial sans-serif", Arial, Helvetica, sans-serif;
 
 
 }
@@ -23,8 +23,14 @@ h1{
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
-  text-decoration: underline 1px lightgrey;
+  text-decoration: underline 2px lightgrey;
   line-height: 10px;
+  
+}
+
+main{
+  margin-left: 100px;
+
 }
 
 form{
@@ -59,7 +65,6 @@ table{
 }
 
 td{
-  border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   padding-top: 25px;
 }
@@ -87,10 +92,19 @@ tr:hover{
 }
 
 footer{
-  margin-top: 60%;
+  bottom: 0;
+  position: fixed;
+  display: inline;
+  margin-left: 0px;
+  background-color: white;
+}
+
+footer > p{
+  display: inline;
 }
 
 .fini{
   text-decoration: line-through;
+  color: red;
 }
 

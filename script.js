@@ -1,43 +1,82 @@
 
 const btn = document.getElementById('btn1');
-const contenu = document.getElementsByName('tache');
+// non fonctionnelle
+// if (keycode == 32){
+//   newList()
+// }
+
+function newList() {
+  const title = document.getElementById('title');
+  const titleValue = title.value;
+  const titleLength = titleValue.length;
 
 
-function newList (){
-  title = document.getElementById('title');
-  tache = document.getElementById('tache');
-  const newTache = document.createElement('tr');
+  const tache = document.getElementById('tache');
+  const tacheValue = tache.value;
+  const tacheLength = tacheValue.length;
+  console.log(tacheValue);
+  console.log(tacheLength);
+
+
   const table = "tableau";
-  let checkbox = document.getElementsByClassName('btnSup');
-  console.log(checkbox.checked);
+  const newTache = document.createElement('tr');
 
-newTache.innerHTML = `
-<tr class="" name="${table}"id="" name="nouvelleLigne" value="">
-  <td class="btnSup"><input type="checkbox" name="" onclick="(functFini)" id="coche" checked></td>
-  <td name="" class="title">${title.value}</td>
-  <td name="tache" class="descript">${tache.value}</td>
-  <td class="btnSup"><button id="btn2" type="reset">supprimer</button></td>
-</tr>
-`;
+  // console.log(checkbox);
 
-  document.querySelector("table").appendChild(newTache);
-  console.log('titre ' + title.value);
-  console.log('tache ' + tache.value);
+  // const i = 0;
+
+  if (tacheLength && titleLength > 0) {
+    newTache.innerHTML = `
+    <tr class="" name="titleValue"id="" name="nouvelleLigne" value="">
+    <td class="btnSup"><input type="checkbox" name="${titleValue}" onChange="(functFini)" id="coche" checked ></td>
+    <td name="titleValue" class="title">${titleValue}</td>
+    <td name="tache" class="descript">&#10132 ${tache.value}</td>
+    <td class="btnSup"><button id="btn2" type="reset">supprimer</button></td>
+    </tr>
+
+<script>
+const checkbox = document.getElementById('coche');
+
+checkbox.addEventListener("click", function () {
+  alert('changed');
+})
+</script>
+
+    `;
+
+    document.querySelector("table").appendChild(newTache);
+
+    
+    console.log(titleValue);
+    console.log(titleLength);
+
+    // non fonctionnelle
+    if (tacheLength || titleLength == 0) {
+      console.log('titre -> ' + "non défini");
+      console.log('tache -> ' + "non défini");
+    }
+
+  } else {
+    alert("Pour créer une nouvelle veuillez rentrer un Titre et une Description");
+  }
 }
 
-function functFini(){
-  if (checked == false){
+
+function functFini() {
+  if (checked == true) {
     contenu.ClassList.add('fini');
-  }else{
+  } else {
     contenu.classList.remove('fini');
   }
 }
 
 btn.addEventListener("click", newList);
-// checkbox.addEventListener("click", functFini);
-console.log("tr");
-console.log("h1");
 
+// const checkbox = document.getElementById('coche');
 
+// checkbox.addEventListener("click", function () {
+//   alert('changed');
+// })
 
-
+// erreur sur l'écouste de l'évènement
+// checkbox.addEventListener("Change", functFini());
