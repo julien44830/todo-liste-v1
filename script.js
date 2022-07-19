@@ -31,17 +31,8 @@ function newList() {
     <td class="btnSup"><input type="checkbox" name="${titleValue}" onChange="(functFini)" id="coche" checked ></td>
     <td name="titleValue" class="title">${titleValue}</td>
     <td name="tache" class="descript">&#10132 ${tache.value}</td>
-    <td class="btnSup"><button id="btn2" type="reset">supprimer</button></td>
+    <td class="btnSup"><button id="btn2" type="reset">x</button></td>
     </tr>
-
-<script>
-const checkbox = document.getElementById('coche');
-
-checkbox.addEventListener("click", function () {
-  alert('changed');
-})
-</script>
-
     `;
 
     document.querySelector("table").appendChild(newTache);
