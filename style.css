@@ -35,9 +35,12 @@ main{
 
 form{
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 50px;
+  padding-bottom: 22px;
   padding-left: 100px;
-  width: 70%;
+  width: 100%;
+  margin-left: -100px;
+  background-color: lightgrey;
+  align-items: center;
 }
 
 input{
@@ -55,7 +58,20 @@ input:focus{
 }
 
 button{
+  margin-top: 20px;
   margin-left: 25px;
+  border-radius: 50%;
+  font-size: 2em;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  font-weight: 100;
+  padding: 3px;
+  display: inline-flex;
+  flex-direction: row;
+  background-color:green;
+  color: white;
+  text-align: center;
 }
 
 table{
@@ -108,3 +124,8 @@ footer > p{
   color: red;
 }
 
+#btn2{
+  background-color: red;
+  padding: 6px;
+  align-items: center;
+}
