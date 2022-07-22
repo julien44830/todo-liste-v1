@@ -51,8 +51,8 @@ function functFini(){
   
   if(check.checked == true){
     console.log('checked');
-    const td = document.querySelectorAll('td');
-    td.classlist.add('fini');
+    const h1 = document.querySelector('h1');
+    h1.classlist.add('fini');
     
   }else{
     console.log("noChecked");
