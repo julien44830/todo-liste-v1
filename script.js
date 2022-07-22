@@ -48,13 +48,13 @@ btn.addEventListener("click", newList);
 
 function functFini(){
   const check = document.getElementById('coche');
-
-  if(check.checked === true){
-    console.Log("checked");
-    const tr = document.getElementsByTagName('tr');
-
-    tr.classList.add("fini");
+  
+  if(check.checked == true){
+    console.log('checked');
+    const h1 = document.querySelector('h1');
+    h1.classlist.add('fini');
+    
   }else{
-    console.Log("noChecked");
+    console.log("noChecked");
   }
 }
