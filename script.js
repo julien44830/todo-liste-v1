@@ -48,11 +48,11 @@ btn.addEventListener("click", newList);
 
 function functFini(){
   const check = document.getElementById('coche');
-  const tr = document.getElementsByName('nouvelleLigne');
-
+  
   if(check.checked == true){
     console.log('checked');
-    alert('checked');
+    const td = document.querySelectorAll('td');
+    td.classlist.add('fini');
     
   }else{
     console.log("noChecked");
