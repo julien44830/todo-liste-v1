@@ -144,3 +144,16 @@ footer > p{
   margin-top: -27px;
   padding-bottom: 9px;
 }
+
+#btn2:hover{
+  box-shadow: 0px 0px 3px green;
+
+}
+
+#btn2:active{
+  background-color: black;
+  box-shadow: 0px 0px 5px black;
+  transition: 150ms;
+  color: tomato;
+
+}
