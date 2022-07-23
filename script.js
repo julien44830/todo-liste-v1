@@ -25,12 +25,12 @@ function newList() {
     <tr class="" name="titleValue" id="NewTacheLine " name="nouvelleLigne" value="">
       <td class="btnSup">
     
-     <labal for="coche">
+      <labal for="coche">
         <input type="checkbox" name="${titleValue}" onChange="functFini()" id="coche"></td>
       </label>
     
       <td name="tache" class="title">${titleValue}</td>
-      <td name="tache" class="descript">${tache.value}</td>
+      <td name="tache" class="descript">${tacheValue}</td>
       
       <td class="btnSup"><button id="btn2" type="button">x</button></td>
     </tr>
@@ -55,7 +55,7 @@ function functFini(){
     console.log('checked');
     document.querySelector('h1').classList.toggle("fini");
     document.querySelector("tr.title[id=tache]");
-  }else{
+  }else if(check.checked ===false){
     console.log("noChecked");
     document.querySelector('h1').classList.toggle("fini");
 
