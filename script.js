@@ -46,14 +46,18 @@ function newList() {
 }
 btn.addEventListener("click", newList);
 
+
 function functFini(){
   const check = document.getElementById('coche');
   
-  if(check.checked == true){
+  if(check.checked === true){
     console.log('checked');
-    newTache.className = "fini";
-    
+    document.querySelector('h1').classList.toggle("fini");
+    document.querySelector("td>tr.title[id=tache]");
   }else{
     console.log("noChecked");
+    document.querySelector('h1').classList.toggle("fini");
+
+
   }
 }
