@@ -23,15 +23,16 @@ function newList() {
   if (tacheLength && titleLength > 0) {
     newTache.innerHTML = `
     <tr class="" name="titleValue" id="NewTacheLine " name="nouvelleLigne" value="">
-    <td class="btnSup">
+      <td class="btnSup">
     
-    <labal for="coche">
-    <input type="checkbox" name="${titleValue}" onChange="functFini()" id="coche"></td>
-    </label>
+     <labal for="coche">
+        <input type="checkbox" name="${titleValue}" onChange="functFini()" id="coche"></td>
+      </label>
     
-    <td name="tache" class="title">${titleValue}</td>
-    <td name="tache" class="descript">${tache.value}</td>
-    <td class="btnSup"><button id="btn2" type="button">x</button></td>
+      <td name="tache" class="title">${titleValue}</td>
+      <td name="tache" class="descript">${tache.value}</td>
+      
+      <td class="btnSup"><button id="btn2" type="button">x</button></td>
     </tr>
     `;
     
@@ -52,8 +53,8 @@ function functFini(){
   
   if(check.checked === true){
     console.log('checked');
-    document.querySelector('h1').classList.toggle("fini");
-    document.querySelector("td>tr.title[id=tache]");
+    document.document.getElementsByName(`${titleValue}`).classList.toggle("fini");
+    document.querySelector("tr.title[id=tache]");
   }else{
     console.log("noChecked");
     document.querySelector('h1').classList.toggle("fini");
