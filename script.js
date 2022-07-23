@@ -29,8 +29,8 @@ function newList() {
     <input type="checkbox" name="${titleValue}" onChange="functFini()" id="coche"></td>
     </label>
     
-    <td name="titleValue" class="title">${titleValue}</td>
-    <td name="tache" class="descript">&#10132 ${tache.value}</td>
+    <td name="tache" class="title">${titleValue}</td>
+    <td name="tache" class="descript">${tache.value}</td>
     <td class="btnSup"><button id="btn2" type="button">x</button></td>
     </tr>
     `;
@@ -51,8 +51,7 @@ function functFini(){
   
   if(check.checked == true){
     console.log('checked');
-    const h1 = document.querySelector('h1');
-    h1.classlist.add('fini');
+    newTache.className = "fini";
     
   }else{
     console.log("noChecked");
