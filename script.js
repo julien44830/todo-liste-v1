@@ -53,7 +53,7 @@ function functFini(){
   
   if(check.checked === true){
     console.log('checked');
-    document.document.getElementsByName(`${titleValue}`).classList.toggle("fini");
+    document.querySelector('h1').classList.toggle("fini");
     document.querySelector("tr.title[id=tache]");
   }else{
     console.log("noChecked");
