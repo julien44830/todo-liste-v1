@@ -94,7 +94,7 @@ formBtn.addEventListener("click", (event) => {
   // addDoneTodoOption();
 });
 
-checkbox.addEventListener("change", (event) => {
+checkbox.addEventListener("click", (event) => {
   event.preventDefault();
 
   addClassFiniOption();
