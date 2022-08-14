@@ -29,7 +29,7 @@ function createTask(titleValue, tacheValue){
   <td class="btnSup">
   
   <labal for="coche">
-  <input type="checkbox" name="coche" onChange="functFini()" id="coche"></td>
+  <input type="checkbox" id="coche" class="finish"></td>
   </label>
   
   <td name="tache" class="title">${titleValue}</td>
@@ -42,51 +42,49 @@ function createTask(titleValue, tacheValue){
   `;
   
   document.querySelector("table").appendChild(newTache);
-  console.log('rien');
 }
 
 
 
-  function functFini(){
-    const check = document.querySelectorAll('coche');
+function functFini(){
+  const check = document.querySelectorAll('checkbox.finish');
+  console.log("TABLEU", typeof check);
+  console.log(check);
 
-    console.log("TABLEU", typeof check)
-    console.log(check);
-
-// faire ici une boucle for
-for (let i = 0; i < check.length; i++) {
-  check[i].addEventListener('click', function() {
+  for (let i = 0; i < check.length; i++) {
+    check[i].addEventListener('click', function() {
       this.parentNode.parentNode.classList.add('.fini');
       //TODO: Chercher la description du parent pour ajouter la classe fini
-      const parentDesc = document.getElementsByName('tache')
-      console.log("parentDesc", parentDesc)
+      const parentDesc = document.getElementsByName('tache');
+      console.log("parentDesc", parentDesc);
       parentDesc.forEach(node => node.classList.add('fini'))
       setTimeout(() => {
         this.parentNode.parentNode.remove();
       }, 2000);
-  });
-}
-    if(check.checked === true){
-      console.log('checked');
-      
-    }else if(check.checked ===false){
-      console.log("noChecked");
-      
-    }
+    });
   }
+
+  if(check.checked === true){
+    console.log('checked');
+    
+  }else if(check.checked ===false){
+    console.log("noChecked");
+
+  }
+}
 
 
   function addDeleteTodoOption() {
     const todoListDeleteBtns = document.querySelectorAll('button.finish');
-    console.log("TABLEU", typeof todoListDeleteBtns)
+    console.log("TABLEU", typeof todoListDeleteBtns);
     console.log(todoListDeleteBtns);
-    
+
     for (let i = 0; i < todoListDeleteBtns.length; i++) {
       todoListDeleteBtns[i].addEventListener('click', function() {
           this.parentNode.parentNode.classList.add('.fini');//remplacer .fini par une animation
           //TODO: Chercher la description du parent pour ajouter la classe fini
-          const parentDesc = document.getElementsByName('tache')
-          console.log("parentDesc", parentDesc)
+          const parentDesc = document.getElementsByName('tache');
+          console.log("parentDesc", parentDesc);
           // parentDesc.forEach(node => node.classList.add('fini'))
           setTimeout(() => {
             this.parentNode.parentNode.remove();
@@ -106,7 +104,7 @@ for (let i = 0; i < check.length; i++) {
 
     createTask(titleValue, tacheValue);
     addDeleteTodoOption();
-    // addDoneTodoOption();
+    functFini(titleValue, tacheValue);
   });
 
 
