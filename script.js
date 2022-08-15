@@ -12,15 +12,6 @@ const tacheValue = tache.value;
 const tacheLength = tacheValue.length;
 const titleLength = titleValue.length;
 
-function newList() {
-  const title = document.getElementById('title');
-
-  const tache = document.getElementById('tache');
-  console.log(tacheLength);
-  console.log(titleLength);
-
-  const newTache = document.createElement('tr');
-}
 
 function createTask(titleValue, tacheValue){
   const newTache = document.createElement('tr');
