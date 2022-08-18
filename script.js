@@ -12,15 +12,6 @@ const tacheValue = tache.value;
 const tacheLength = tacheValue.length;
 const titleLength = titleValue.length;
 
-function newList() {
-  const title = document.getElementById('title');
-
-  const tache = document.getElementById('tache');
-  console.log(tacheLength);
-  console.log(titleLength);
-
-  const newTache = document.createElement('tr');
-}
 
 function createTask(titleValue, tacheValue){
   const newTache = document.createElement('tr');
@@ -53,14 +44,12 @@ function functFini(){
 
   for (let i = 0; i < check.length; i++) {
     check[i].addEventListener('click', function() {
-      this.parentNode.parentNode.classList.add('.fini');
+      this.parentNode.classList.add('fini');
       //TODO: Chercher la description du parent pour ajouter la classe fini
       const parentDesc = document.getElementsByName('tache');
       console.log("parentDesc", parentDesc);
-      parentDesc.forEach(node => node.classList.add('fini'))
-      setTimeout(() => {
-        this.parentNode.parentNode.remove();
-      }, 2000);
+      console.log(check);
+
     });
   }
 
@@ -81,14 +70,14 @@ function functFini(){
 
     for (let i = 0; i < todoListDeleteBtns.length; i++) {
       todoListDeleteBtns[i].addEventListener('click', function() {
-          this.parentNode.parentNode.classList.add('.fini');//remplacer .fini par une animation
+          this.parentNode.parentNode.classList.add('finiRemove');//remplacer .fini par une animation
           //TODO: Chercher la description du parent pour ajouter la classe fini
           const parentDesc = document.getElementsByName('tache');
           console.log("parentDesc", parentDesc);
-          // parentDesc.forEach(node => node.classList.add('fini'))
+          parentDesc.forEach(node => node.classList.add('finiRemouve'))
           setTimeout(() => {
             this.parentNode.parentNode.remove();
-          }, 200);
+          }, 1000);
       });
     }
   };

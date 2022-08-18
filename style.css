@@ -160,3 +160,23 @@ footer > p{
   color: black;
 
 }
+
+.finiRemove{
+  animation: remove 1.8s  ;
+}
+
+@keyframes remove {
+  0%{
+
+  }
+  10%{
+    translate: -70px;
+  }
+  50%{
+    /* translate: 800px; */
+  }
+  100%{
+    translate: 1800px;
+  }
+  
+}
